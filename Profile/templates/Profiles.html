@@ -1,0 +1,28 @@
+<html lang="en-us"><head>
+<title>List Of All Profiles</title>
+
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+
+
+<body >
+<!-- Container -->
+<div align="center">
+<ul>
+<h1>List of Profiles</h1>
+{% for profile in profiles %}
+<a href="{% url 'update_profile' profile.id%}">
+<li>{{profile.firstname}}{{profile.address}}
+<br>
+{{profile.email}}
+<br>
+{{profile.phone}}
+</li><br>
+</a>
+{% endfor %}
+</ul>
+<br>
+<a href="{% url 'create_profile'%}">Add New Profile</a>
+</div>
+</body>
+</html>

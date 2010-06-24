@@ -1,0 +1,22 @@
+<html lang="en-us"><head>
+<title>Register UserType</title>
+
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+
+<body >
+<!-- Container -->
+<div align="center">
+<form method="POST">
+{% csrf_token %}
+{{form }}
+<button type="submit">Save</button>
+</form>
+{% if UserType %}
+<a href="{% url 'delete_user' UserType.id %}">Delete</a>
+{% endif %}
+</div>
+</body>
+</html>

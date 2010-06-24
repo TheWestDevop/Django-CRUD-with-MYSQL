@@ -1,0 +1,19 @@
+<html lang="en-us"><head>
+<title>Register New Profile</title>
+
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+
+<body >
+<!-- Container -->
+<div align="center">
+<form method="POST">
+{% csrf_token %}
+<h1>Are you sure you want to delete <b> {{profile.firstname}} {{profile.lastname}}  </b> </h1>
+<button type="submit">Delete</button>
+</form>
+</div>
+</body>
+</html>

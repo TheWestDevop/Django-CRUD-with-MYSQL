@@ -1,0 +1,23 @@
+<html lang="en-us"><head>
+<title>List Of All Companies</title>
+
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+
+
+<body >
+<!-- Container -->
+<div align="center">
+<ul>
+<h1>List of Companies</h1>
+{% for company in companies %}
+<a href="{% url 'update_company' company.id%}">
+<li>{{company.name}} <br> office <small>{{company.address}}</small></li><br>
+</a>
+{% endfor %}
+</ul>
+<br>
+<a href="{% url 'create_company'%}">Add New Company</a>
+</div>
+</body>
+</html>

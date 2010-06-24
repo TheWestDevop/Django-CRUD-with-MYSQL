@@ -1,0 +1,30 @@
+<html lang="en-us"><head>
+<title>List Of All Users</title>
+
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+
+
+<body >
+<!-- Container -->
+<div align="center">
+<ul>
+<h1>List of Users</h1>
+{% for user in users %}
+<a href="{% url 'update_user' user.id%}">
+<li>{{user.username}}{{user.password}}
+<br>
+{{user.isemailverified}}
+<br>
+{{user.isphoneverified}}
+<br>
+{{user.status}}
+</li><br>
+</a>
+{% endfor %}
+</ul>
+<br>
+<a href="{% url 'create_user'%}">Add New User</a>
+</div>
+</body>
+</html>
